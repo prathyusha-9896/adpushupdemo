@@ -770,38 +770,33 @@
   font-family: "Poppins", Sans-serif;
 }
 
-.container-five .text p {
-  position: relative;
-  opacity: 0;
-  transform: translateX(-100%); 
-}
-
-.container-five .text p.animate-text {
-  animation: slideFromLeft 1.5s ease-out forwards;
-}
-
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
+/* For feature-card animation */
 .feature-card {
   transform: scale(0.5); 
   opacity: 0; 
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out; 
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-.feature-card.animate-card {
+.feature-card.animate-visible {
   transform: scale(1); 
-  opacity: 1;
+  opacity: 1; 
 }
+
+/* For text animation */
+.container-five .text p {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.container-five .text p.animate-visible {
+  transform: translateX(0); 
+  opacity: 1; 
+}
+
+
+
 
 
     </style>
@@ -1132,19 +1127,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-visible');
-        }
-      });
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+            }
+        });
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.feature-card, .container-five .text p');
+
+        elementsToAnimate.forEach(element => observer.observe(element));
     });
-
-    const elementsToAnimate = document.querySelectorAll('.feature-card, .container-five .text p');
-
-    elementsToAnimate.forEach(element => observer.observe(element));
-  });
 function scrollToTop() {
         window.scrollTo({
             top: 0,
