@@ -85,11 +85,11 @@
             padding: 30px;
             max-width: 576px;
             box-shadow: 0 0 30px rgb(165 42 50 / 26%);
-            position: fixed; /* Fixed position */
-            right: 120px; /* Position it to the right */
-            top: 80px; /* Position it near the top */
-            z-index: 1000; /* Ensure it's above other content */
-            width: 26.3%; /* Set an appropriate width */
+            position: fixed; 
+            right: 120px; 
+            top: 80px;
+            z-index: 1000; 
+            width: 26.3%; 
         }
 
 
@@ -238,7 +238,7 @@
         }
 
         .swiper-slide-active img {
-            transform: scale(1.1); /* Zoom effect on active slide */
+            transform: scale(1.1); 
             opacity: 1;
         }
 
@@ -270,7 +270,7 @@
 
         .features {
     padding: 50px 0;
-    background-color: #fff4f4; /* Light pink background */
+    background-color: #fff4f4;
 }
 
 .container-three {
@@ -367,7 +367,7 @@
 .reasons {
     padding: 50px 0;
     padding-left: 110px;
-    background-color: #fff; /* Light pink background */
+    background-color: #fff; 
 }
 
 
@@ -376,11 +376,11 @@
 
         .footer-section {
     display: flex;
-    justify-content: space-between; /* Align the text and button to opposite ends */
+    justify-content: space-between; 
     align-items: center;
-    padding: 20px 50px; /* Adjust padding for spacing */
-    background-color: #fff; /* Background color */
-    border-top: 1px solid #ccc; /* Optional: border at the top */
+    padding: 20px 50px;
+    background-color: #fff; 
+    border-top: 1px solid #ccc; 
 }
 
 .footer-text {
@@ -400,17 +400,17 @@
     border: none;
     cursor: pointer;
     font-size: 20px;
-    text-decoration: none; /* Underline to match the style */
+    text-decoration: none; 
 }
 
 .back-to-top:hover {
-    text-decoration: none; /* Remove underline on hover */
+    text-decoration: none; 
 }
 
 .back-to-top img {
     width: 20px;
     height: auto;
-    margin-right: 8px; /* Adjust to give space between flag and text */
+    margin-right: 8px; 
 }
 
 @media (max-width: 768px) {
@@ -467,11 +467,8 @@
             margin-left: auto;
             position: relative;
         }
-/* Default styles are for larger screens, such as desktops */
 
-/* For all screens less than 1024px */
 @media (max-width: 1024px) {
-    /* General Layout Adjustments */
     .container {
         padding: 50px;
     }
@@ -534,20 +531,18 @@
 
         .logos {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
-    gap: 0px; /* Space between the images */
-    justify-content: space-between; /* Ensures even spacing */
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: space-between;
 }
 
 .logos img {
     display: block;
-    width: calc(33.33% - 10px); /* Each image takes up about 1/3 of the row minus the gap */
-    max-width: 100%; /* Prevents images from overflowing */
-    height: auto; /* Keeps the aspect ratio */
+    width: calc(33.33% - 10px); 
+    max-width: 100%; 
+    height: auto;
 }
 
-
-    /* Feature Section Adjustments */
     .features {
         padding: 50px;
     }
@@ -626,7 +621,6 @@
         align-items: center;
     }
 
-    /* Swiper Carousel Adjustments */
     .swiper-container {
         width: 100%;
     }
@@ -636,7 +630,6 @@
         height: auto;
     }
 
-    /* Form Section Adjustments */
     .form-container {
         padding: 15px;
     }
@@ -654,20 +647,20 @@
 
     .logos {
         display: flex;
-        justify-content: center; /* Align items horizontally in the center */
-        align-items: center; /* Align items vertically in the center */
-        flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+        justify-content: center; 
+        align-items: center; 
+        flex-wrap: wrap;
     }
 
     .logos img {
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
+        margin-left: auto; 
+        margin-right: auto;
     }
     
     .reasons {
     padding: 50px 0;
     padding-left: 0px;
-    background-color: #fff; /* Light pink background */
+    background-color: #fff;
 }
 
 
@@ -777,6 +770,38 @@
   font-family: "Poppins", Sans-serif;
 }
 
+.container-five .text p {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%); 
+}
+
+.container-five .text p.animate-text {
+  animation: slideFromLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.feature-card {
+  transform: scale(0.5); 
+  opacity: 0; 
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out; 
+}
+
+.feature-card.animate-card {
+  transform: scale(1); 
+  opacity: 1;
+}
 
 
     </style>
@@ -883,7 +908,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">1</p>
-                    <span class="ad-networks-title">30+ Ad Networks</span> <!-- Add this span -->
+                    <span class="ad-networks-title">30+ Ad Networks</span> 
                 </div>
                 <div class="feature-block" >                
                     <div class="feature-text">
@@ -902,7 +927,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">2</p>
-                    <span class="ad-networks-title">Improved Page Speed</span> <!-- Add this span -->
+                    <span class="ad-networks-title">Improved Page Speed</span>
                 </div>
                 <div class="feature-block" >                
                     <div class="feature-text">
@@ -922,7 +947,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">3</p>
-                    <span class="ad-networks-title">360-Degree Reporting</span> <!-- Add this span -->
+                    <span class="ad-networks-title">360-Degree Reporting</span>
                 </div>
                 <div class="feature-block" >                
                     <div class="feature-text">
@@ -942,7 +967,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">4</p>
-                    <span class="ad-networks-title">Best AdSense Alternative</span> <!-- Add this span -->
+                    <span class="ad-networks-title">Best AdSense Alternative</span> 
                 </div>
             
                 <div class="feature-block" >                
@@ -962,7 +987,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">5</p>
-                    <span class="ad-networks-title" style="">Access to Premium Demand Partners</span> <!-- Add this span -->
+                    <span class="ad-networks-title" style="">Access to Premium Demand Partners</span> 
                 </div>
                 <div class="feature-block" >                
                     <div class="feature-text">
@@ -982,7 +1007,7 @@
                 </div>
                 <div class="feature-number-wrapper">
                     <p class="feature-number" style="">6</p>
-                    <span class="ad-networks-title">Results-Driven Ad Ops Team</span> <!-- Add this span -->
+                    <span class="ad-networks-title">Results-Driven Ad Ops Team</span>
                 </div>
                 <div class="feature-block" >                
                     <div class="feature-text">
@@ -1107,7 +1132,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-visible');
+        }
+      });
+    });
 
+    const elementsToAnimate = document.querySelectorAll('.feature-card, .container-five .text p');
+
+    elementsToAnimate.forEach(element => observer.observe(element));
+  });
 function scrollToTop() {
         window.scrollTo({
             top: 0,
